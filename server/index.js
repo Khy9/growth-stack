@@ -11,7 +11,7 @@ app.use(express.json());
 app.use("/api", skillsRoute);
 
 app.get("/", (req, res) => {
-  res.send("Growth Stack Server Running");
+  res.send("Growth Stack Server Running 🚀");
 });
 
 app.listen(5000, () => {

@@ -1,9 +1,9 @@
 const getSkillData = async () => {
   return {
-    AI: 90,
-    WebDev: 75,
-    Cybersecurity: 85,
-    IoT: 65
+    AI: 8,
+    WebDev: 6,
+    Cybersecurity: 7,
+    IoT: 5
   };
 };
 

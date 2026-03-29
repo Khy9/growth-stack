@@ -18,7 +18,26 @@ const getAllSkillData = async () => {
       success: false,
       error: error.message
     };
+  }const getSkillData = require("./skillData");
+const fetchBrightData = require("./brightData");
+
+const getAllSkillData = async () => {
+  try {
+
+    const skillData = await getSkillData();
+    const marketData = await fetchBrightData();
+
+    return {
+      skillData,
+      marketData
+    };
+
+  } catch (error) {
+    throw error;
   }
+};
+
+module.exports = getAllSkillData;
 };
 
 module.exports = getAllSkillData;

@@ -1,5 +1,4 @@
 const fetchBrightData = async () => {
-  // temporary dummy data (replace with Bright Data API later)
 
   const marketTrends = {
     AI: {
