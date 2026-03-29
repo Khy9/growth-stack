@@ -2,13 +2,23 @@ const getSkillData = require("./skillData");
 const fetchBrightData = require("./brightData");
 
 const getAllSkillData = async () => {
-  const skillData = await getSkillData();
-  const brightData = await fetchBrightData();
+  try {
+    const skillData = await getSkillData();
+    const marketData = await fetchBrightData();
 
-  return {
-    skillData,
-    marketData: brightData
-  };
+    return {
+      success: true,
+      data: {
+        skillData,
+        marketData
+      }
+    };
+  } catch (error) {
+    return {
+      success: false,
+      error: error.message
+    };
+  }
 };
 
 module.exports = getAllSkillData;
